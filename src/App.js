@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
+import MusicTable from './Components/MusicTable/musicTable';
 const axios = require('axios');
-import './App.css';
 
 class App extends Component {
   state = {
     music: [],   
+  }
+
+  componentDidMount(){
+    this.getMusic()
   }
 
   async getMusic(){
@@ -16,7 +20,8 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">     
+      <div className="App">
+        <MusicTable music={this.state.music}/>
       </div>
     );
   }
