@@ -18,10 +18,15 @@ class App extends Component {
     });
   }
 
+  deleteSong= async (songId)=>{
+    await axios.delete(`http://127.0.0.1:8000/music/${songId}/`);
+    this.getMusic(); 
+  }
+
   render(){
     return (
       <div className="App">
-        <MusicTable music={this.state.music}/>
+        <MusicTable music={this.state.music} delete={this.deleteSong}/>
       </div>
     );
   }
