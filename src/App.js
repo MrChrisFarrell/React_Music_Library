@@ -18,6 +18,11 @@ class App extends Component {
     });
   }
 
+  addSong= async (song)=>{
+    await axios.post(`http://127.0.0.1:8000/music/`, song);
+    this.getMusic();
+  }
+
   deleteSong= async (songId)=>{
     await axios.delete(`http://127.0.0.1:8000/music/${songId}/`);
     this.getMusic(); 
