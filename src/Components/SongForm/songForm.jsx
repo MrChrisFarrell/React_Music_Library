@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
 class SongForm extends Component{
-    state = {
-        title: '',
-        artist: '',
-        album: '',
-        releaseDate: '',
-        errors: {
+    constructor(props) {
+        super(props);
+        this.state = {
             title: '',
             artist: '',
             album: '',
-            releaseDate: ''
+            releaseDate: '',
+            errors: {
+                title: '',
+                artist: '',
+                album: '',
+                releaseDate: ''
+            }
         }
     }
 
