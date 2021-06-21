@@ -43,7 +43,8 @@ class SongForm extends Component{
             title: this.state.title,
             artist: this.state.artist,
             album: this.state.album,
-            releaseDate: this.state.releaseDate
+            release_date: this.state.releaseDate,
+            likes: 0
         };
         alert(`Title: ${this.state.title}\n
         Artist: ${this.state.artist}\n
