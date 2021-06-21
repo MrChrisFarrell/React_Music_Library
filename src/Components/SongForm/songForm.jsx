@@ -56,26 +56,26 @@ class SongForm extends Component{
         return(
             <form onSubmit={(event)=> this.handleSubmit(event, this.props)}>
                 <div>
-                    <label>Superhero I.D.</label>
-                    <input type="text" name="superheroId" onChange={this.handleChange} value={this.state.superheroId}/>
-                    {this.state.errors.superheroId ? <p style={{color:'red'}}>{this.state.errors.superheroId}</p> : ''}
+                    <label>Song Title:</label>
+                    <input type="text" name="title" onChange={this.handleChange} value={this.state.title}/>
+                    {this.state.errors.title ? <p style={{color:'red'}}>{this.state.errors.title}</p> : ''}
                 </div>
                 <div>
-                    <label>Name</label>
-                    <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
-                    {this.state.errors.name ? <p style={{color:'red'}}>{this.state.errors.name}</p> : ''}
+                    <label>Artist:</label>
+                    <input type="text" name="artist" onChange={this.handleChange} value={this.state.artist}/>
+                    {this.state.errors.artist ? <p style={{color:'red'}}>{this.state.errors.artist}</p> : ''}
                 </div>
                 <div>
-                    <label>Primary Ability</label>
-                    <input type="text" name="primaryAbility" onChange={this.handleChange} value={this.state.primaryAbility}/>
-                    {this.state.errors.primaryAbility ? <p style={{color:'red'}}>{this.state.errors.primaryAbility}</p> : ''}
+                    <label>Album:</label>
+                    <input type="text" name="album" onChange={this.handleChange} value={this.state.album}/>
+                    {this.state.errors.album ? <p style={{color:'red'}}>{this.state.errors.album}</p> : ''}
                 </div>
                 <div>
-                    <label>Secondary Ability</label>
-                    <input type="text" name="secondaryAbility" onChange={this.handleChange} value={this.state.secondaryAbility}/>
-                    {this.state.errors.secondaryAbility ? <p style={{color:'red'}}>{this.state.errors.secondaryAbility}</p> : ''}
+                    <label>Release Date:</label>
+                    <input type="date" name="releaseDate" onChange={this.handleChange} value={this.state.releaseDate}/>
+                    {this.state.errors.releaseDate ? <p style={{color:'red'}}>{this.state.errors.releaseDate}</p> : ''}
                 </div>
-                <button type="submit">Add Superhero</button>
+                <button type="submit">Add Song</button>
             </form>
         );
     }

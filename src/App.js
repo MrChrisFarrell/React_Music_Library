@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import MusicTable from './Components/MusicTable/musicTable';
+import SongForm from './Components/SongForm/songForm';
 const axios = require('axios');
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
+        <SongForm addSong={this.addSong}/>
         <MusicTable music={this.state.music} delete={this.deleteSong}/>
       </div>
     );
