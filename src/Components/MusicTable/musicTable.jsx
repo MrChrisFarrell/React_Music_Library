@@ -13,7 +13,6 @@ function MusicTable(props){
     );
     return(
         <div>
-            <input type="text" id="myInput" placeholder="Search for..."/>
             <table id="myTable">
                 <thead>
                     <tr>Songs</tr>
