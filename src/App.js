@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MusicTable from './Components/MusicTable/musicTable';
 import SongForm from './Components/SongForm/songForm';
 import FilterBar from './Components/FilterBar/filterBar';
+import './App.css';
 const axios = require('axios');
 
 class App extends Component {
